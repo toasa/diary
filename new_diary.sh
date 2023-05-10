@@ -10,7 +10,7 @@ function getDayOfWeek () {
     echo "${week[$dow]}曜日"
 }
 
-DIARY_ROOT_PATH="./"
+DIARY_ROOT_PATH="."
 Y=$(date "+%Y")
 M=$(date "+%m")
 D=$(date "+%d")
@@ -59,4 +59,6 @@ fi
 if [ ! -e ${TODAY_DIARY} ]; then
     echo "$content" > ${TODAY_DIARY}
     echo "Create new diary: ${TODAY_DIARY}"
+else
+    echo "Already exists!: ${TODAY_DIARY}"
 fi
