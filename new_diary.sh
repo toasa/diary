@@ -37,6 +37,8 @@ content=$(cat << EOF
 
 <img src="" width="700">
 
+### ことば
+
 ### Fragments
 
 EOF
