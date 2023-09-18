@@ -22,9 +22,12 @@ def main():
         else:
             missing_diaries.append(d_path)
 
-    print("Coverage: {} / {}".format(count_exist, count_total))
+    coverage_str = "{} / {}".format(count_exist, count_total)
 
-    if len(missing_diaries)  > 0:
+    if len(missing_diaries) == 0:
+        print("Fully coveraged!:", coverage_str)
+    elif len(missing_diaries)  > 0:
+        print("Coverage:", coverage_str)
         print("Missing :")
         for m in missing_diaries:
             print(" " + m)
