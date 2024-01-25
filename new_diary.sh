@@ -44,6 +44,19 @@ content=$(cat << EOF
 EOF
 )
 
+if [ $(getDayOfWeek) = "日曜日" ];then
+    content+=$(cat << "EOF"
+
+### Weekly review
+
+* 今週の目標
+* 達成度
+* 来週の目標
+* やりたいこと
+EOF
+)
+fi
+
 # 月末は歩数報告のセクションを追加
 next_day=$(date -v+1d +%d)
 if [ $next_day = "01" ];then
