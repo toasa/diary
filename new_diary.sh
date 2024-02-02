@@ -44,7 +44,7 @@ content=$(cat << EOF
 EOF
 )
 
-if [ $(getDayOfWeek) = "日曜日" ];then
+if [ $(getDayOfWeek) = "土曜日" ];then
     content+=$(cat << "EOF"
 
 ### Weekly review
