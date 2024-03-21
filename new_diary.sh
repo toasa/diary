@@ -52,7 +52,6 @@ if [ $(getDayOfWeek) = "土曜日" ];then
 * 今週の目標
 * 達成度
 * 来週の目標
-* 次やりたいこと
 EOF
 )
 fi
