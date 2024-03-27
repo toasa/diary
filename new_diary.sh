@@ -79,3 +79,5 @@ if [ ! -e ${TODAY_DIARY} ]; then
 else
     echo "Already exists!: ${TODAY_DIARY}"
 fi
+
+code ${TODAY_DIARY}
