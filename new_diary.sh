@@ -50,7 +50,7 @@ if [ $(getDayOfWeek) = "土曜日" ];then
 ### Weekly review
 
 * 今週の目標
-* 達成度
+* 進捗
 * 来週の目標
 EOF
 )
