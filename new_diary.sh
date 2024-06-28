@@ -44,17 +44,17 @@ content=$(cat << EOF
 EOF
 )
 
-if [ $(getDayOfWeek) = "土曜日" ];then
-    content+=$(cat << "EOF"
-
-### Weekly review
-
-* 今週の目標
-* 進捗
-* 来週の目標
-EOF
-)
-fi
+# if [ $(getDayOfWeek) = "土曜日" ];then
+#     content+=$(cat << "EOF"
+# 
+# ### Weekly review
+# 
+# * 今週の目標
+# * 進捗
+# * 来週の目標
+# EOF
+# )
+# fi
 
 # 月末は歩数報告のセクションを追加
 next_day=$(date -v+1d +%d)
