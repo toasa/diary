@@ -1,0 +1,19 @@
+name: Trigger Site Build
+
+on:
+  push:
+    branches:
+      - main  # 日記をpushするブランチ名
+    paths:
+      - '**/*.md' # mdファイルが変更された時だけ動く
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PA_TOKEN }}
+          repository: toasa/toasa.github.io
+          event-type: update_diary
