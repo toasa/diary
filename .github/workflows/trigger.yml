@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.PA_TOKEN }}
-          repository: toasa/toasa.github.io
-          event-type: update_diary
+        run: |
+          gh api repos/toasa/toasa.github.io/dispatches \
+            -f event_type='update_diary'
+        env:
+          GH_TOKEN: ${{ secrets.PA_TOKEN }}
